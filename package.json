@@ -7,7 +7,7 @@
     "start": "tsc && nodemon dist/main/app.js",
     "build": "babel src --out-dir dist --no-copy-ignored",
     "dev": "nodemon --watch 'src/' --exec 'ts-node src/main/app.ts' -e ts",
-    "test": "jest --watch"
+    "test": "NODE_ENV=test jest --forceExit"
   },
   "repository": {
     "type": "git",
