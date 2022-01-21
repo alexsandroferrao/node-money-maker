@@ -18,7 +18,7 @@ const money: Money={
 })
 
 if(process.env.NODE_ENV !== 'test'){
-    app.listen(porta, ()=>{
+    app.listen(process.env.PORT || porta, ()=>{
         console.log('Aplicacao rodando na porta ' + porta)
     })
 }
