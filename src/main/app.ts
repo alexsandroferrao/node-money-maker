@@ -1,21 +1,13 @@
-import express from "express";
-import { createDocumentRegistry } from "typescript";
+import { createExpressServer } from "routing-controllers";
+import { MoneyController } from "./controllers/moneyController";
+import 'reflect-metadata'
 
-const app = express();
 const porta = 3000;
 
-app.get('/', (req, res) =>{
-    res.send("Boas vindas ao money maker, para buscar um recurso /moneys");
+export const app = createExpressServer({
+    controllers:[MoneyController],
 })
 
-app.get('/moneys', (req, res) =>{
-
-const money: Money={
-    nome:"Exemplo",
-    valor: 20
-}    
-    res.send(money);
-})
 
 if(process.env.NODE_ENV !== 'test'){
     app.listen(process.env.PORT || porta, ()=>{
@@ -23,9 +15,3 @@ if(process.env.NODE_ENV !== 'test'){
     })
 }
 
-export default app
-
-interface Money{
-    nome: string,
-    valor: number
-}
