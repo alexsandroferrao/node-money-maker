@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "node dist/main/app.js",
+    "start": "node dist/app.js",
     "build": "tsc",
     "dev": "nodemon --watch 'src/' --exec 'ts-node src/main/app.ts' -e ts",
     "postinstall": "npm run build",
