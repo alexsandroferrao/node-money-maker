@@ -18,6 +18,6 @@ export default class MoneyService {
 
   deleteIdMoney(id: number) {
     const index = this.moneys.findIndex((money) => money.id == id);
-    delete this.moneys[index];
+    this.moneys.splice(index);
   }
 }
