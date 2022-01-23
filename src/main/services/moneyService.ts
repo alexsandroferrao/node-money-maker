@@ -1,22 +1,23 @@
 import { MoneyModel } from "../models/moneyModel";
+export default class MoneyService {
 
-const moneys: MoneyModel[] = [new MoneyModel(1, "tartaruga", 2)];
+  moneys: MoneyModel[] = [];
 
-export function getAllMoneys(): MoneyModel[] {
-  return moneys;
-}
+  getAllMoneys(): MoneyModel[] {
+    return this.moneys;
+  }
 
-export function getMoney(id:number):MoneyModel{
-    const index = moneys.findIndex(money => money.id == id);
-    return moneys[index];
-}
+  getMoney(id: number): MoneyModel {
+    const index = this.moneys.findIndex((money) => money.id == id);
+    return this.moneys[index];
+  }
 
-export function saveMoney(money: MoneyModel) {
-  moneys.push(money);
-}
+  saveMoney(money: MoneyModel) {
+    this.moneys.push(money);
+  }
 
-export function deleteIdMoney(id: number) {
-  const index = moneys.findIndex(money => money.id == id);
-  console.log(index)
-  delete moneys[index]
+  deleteIdMoney(id: number) {
+    const index = this.moneys.findIndex((money) => money.id == id);
+    delete this.moneys[index];
+  }
 }

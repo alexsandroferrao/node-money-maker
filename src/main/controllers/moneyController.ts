@@ -9,36 +9,36 @@ import {
 } from "routing-controllers";
 import { MoneyModel } from "../models/moneyModel";
 
-import {
-  deleteIdMoney,
-  getAllMoneys,
-  getMoney,
-  saveMoney,
-} from "../services/moneyService";
-
+import  MoneyService  from "../services/moneyService";
 @JsonController("/moneys")
 export class MoneyController {
+  moneyService: MoneyService;
+
+  constructor() {
+    this.moneyService = new MoneyService();
+  }
+
   @Get()
   getAll() {
-    return getAllMoneys();
+    return this.moneyService.getAllMoneys();
   }
 
   @Get("/:id")
   getOne(@Param("id") id: number) {
-    return getMoney(id);
+    return this.moneyService.getMoney(id);
   }
 
   @Post()
   @HttpCode(201)
   post(@Body() money: MoneyModel) {
-    saveMoney(money);
+    this.moneyService.saveMoney(money);
     return "ok";
   }
 
   @Delete("/:id")
   @HttpCode(202)
   delete(@Param("id") id: number) {
-    deleteIdMoney(id);
+    this.moneyService.deleteIdMoney(id);
     return "deletado";
   }
 }
