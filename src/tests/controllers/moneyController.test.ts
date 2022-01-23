@@ -2,13 +2,22 @@ import { app } from "../../main/app";
 import request from "supertest";
 import assert from "assert";
 import { MoneyModel } from "../../main/models/moneyModel";
+import MoneyService from "../../main/services/moneyService";
 
 const req = request(app);
+
+const mockGet = jest.fn();
+
+beforeAll(()=>{
+  MoneyService.prototype.getAllMoneys = mockGet;
+  MoneyService.prototype.getMoney = mockGet;
+})
 
 const moneys: MoneyModel[] = [new MoneyModel(1, "tartaruga", 2)];
 
 describe("Controller /moneys", () => {
   test("deveria retornar lista ", async () => {
+    mockGet.mockReturnValue(moneys);
     const response = await req.get("/moneys");
     
     assert.deepEqual(response.body, moneys)
@@ -16,6 +25,7 @@ describe("Controller /moneys", () => {
   });
 
   test("deveria retornar somente 1 money", async ()=>{
+    mockGet.mockReturnValue(moneys[0]);
     const response = await req.get("/moneys/1");
     
     assert.equal(response.statusCode, 200);
@@ -35,7 +45,4 @@ describe("Controller /moneys", () => {
     
     assert.equal(response.statusCode, 202);
   })
-
-
-
 });
