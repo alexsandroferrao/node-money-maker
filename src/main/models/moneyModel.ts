@@ -1,5 +1,3 @@
-import { IsPositive } from "class-validator";
-
 export class MoneyModel {
   id: number;
   animal: string;
