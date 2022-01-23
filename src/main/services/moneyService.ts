@@ -17,6 +17,5 @@ export function saveMoney(money: MoneyModel) {
 
 export function deleteIdMoney(id: number) {
   const index = moneys.findIndex(money => money.id == id);
-  console.log(index)
   delete moneys[index]
 }
