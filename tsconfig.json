@@ -8,7 +8,8 @@
     "strict": true,
     "esModuleInterop": true,
     "emitDecoratorMetadata" : true ,
-    "experimentalDecorators" : true 
+    "experimentalDecorators" : true,
+    "moduleResolution": "node"
   },
   "include": ["src/main/*"],
   "exclude": ["node_modules", "src/tests"], 

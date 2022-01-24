@@ -16,20 +16,16 @@
 
 Projeto para treinar typescript 
 
-## Backend publicado no heroku:
-
-https://money-maker-node.herokuapp.com/moneys
-
 ## Documentação base:
 
-get /moneys = retorna todos moneys cadastrados;
-get /moneys/{id} = retorna o money com o id especifico;
+https://money-maker-node.herokuapp.com/docs
 
-post /moneys passando o objeto no corpo = cria um money;
-
-delete /moneys/{id} = deleta o money com id especifico.
 
 Backlog:
-- Colocar mais testes;
-- Inspecionar com sonar; 
-- Criar um banco, um swagger;
+- [x] Colocar mais testes;
+- [x]Inspecionar com sonar; 
+- [x] Criar um swagger;
+- [ ] Estudar pq não está pegando coverage;
+- [ ] Criar um banco de dados;
+- [ ] Adicionar validações na entrada do money;
+- [ ] Logar requisições com erro;
