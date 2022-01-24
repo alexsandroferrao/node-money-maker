@@ -23,7 +23,7 @@ https://money-maker-node.herokuapp.com/docs
 
 Backlog:
 - [x] Colocar mais testes;
-- [x]Inspecionar com sonar; 
+- [x] Inspecionar com sonar; 
 - [x] Criar um swagger;
 - [ ] Estudar pq não está pegando coverage;
 - [ ] Criar um banco de dados;
