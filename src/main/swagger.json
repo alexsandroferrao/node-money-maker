@@ -65,7 +65,7 @@
 			"post": {
 				"operationId": "Post",
 				"responses": {
-					"209": {
+					"201": {
 						"description": "Created",
 						"content": {
 							"application/json": {
@@ -121,8 +121,8 @@
 			"delete": {
 				"operationId": "Delete",
 				"responses": {
-					"200": {
-						"description": "Ok",
+					"202": {
+						"description": "Accepted",
 						"content": {
 							"application/json": {
 								"schema": {

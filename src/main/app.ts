@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 RegisterRoutes(app);
 
 try{
-    const swaggerDocument = require('../../swagger.json');
+    const swaggerDocument = require('./swagger.json');
     app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 }catch(err){
     console.error('Não foi possível ler o swagger.json')
