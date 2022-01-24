@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "node dist/app.js",
+    "start": "node dist/main/app.js",
     "build": "tsoa spec-and-routes && tsc",
     "dev": "nodemon --watch 'src/' --exec 'ts-node src/main/app.ts' -e ts",
     "postinstall": "npm run build",

@@ -4,9 +4,9 @@
     <testCase name="Validando moneyService Deve fazer todo crud no service" duration="1"/>
   </file>
   <file path="/home/alexsandro/Documentos/github_pessoal/backend-node/node-money-maker/src/tests/controllers/moneyController.test.ts">
-    <testCase name="Controller /moneys deveria retornar lista " duration="19"/>
-    <testCase name="Controller /moneys deveria retornar somente 1 money" duration="4"/>
-    <testCase name="Controller /moneys Deveria criar um money" duration="10"/>
+    <testCase name="Controller /moneys deveria retornar lista " duration="25"/>
+    <testCase name="Controller /moneys deveria retornar somente 1 money" duration="6"/>
+    <testCase name="Controller /moneys Deveria criar um money" duration="14"/>
     <testCase name="Controller /moneys Deveria deletar um money" duration="3"/>
   </file>
 </testExecutions>
